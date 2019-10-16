@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Capriola'
+	rel='stylesheet'>
+<link rel="stylesheet" href="css/in-time.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="col-sm-offset-3 col-sm-6">
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<ul class="nav nav-tabs nav-justified">
+						<li class="active"><a data-toggle="tab"
+							href="#iscriviCliente">Iscrivi Cliente</a></li>
+						<li><a data-toggle="tab" href="#iscriviProfessionista">Iscrivi
+								Professionista</a></li>
+					</ul>
+				</div>
+
+				<!-- Body del Panel -->
+				<div class="panel-body">
+					<!-- Elementi del tab -->
+					<div class="tab-content">
+						<!-- Form Registrazione -->
+						<div id="iscriviCliente"
+							class="tab-pane fade in active text-center">
+							<h3>Iscriviti come Cliente</h3>
+							<form id="form-iscriviCliente" class="form-horizontal"
+								action="IscriviClienteServlet" method="post">
+								<div class="form-group">
+									<div class="col-sm-6">
+										<input type="text" class="form-control" name="nome"
+											placeholder="Inserisci nome">
+									</div>
+									<div class="col-sm-6">
+										<input type="text" class="form-control" name="cognome"
+											placeholder="Inserisci cognome">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="email" class="form-control" name="mail"
+											placeholder="Inserisci Email" id="mailClient">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="text" class="form-control" name="telefono"
+											placeholder="Inserisci Telefono" id="telefonoClient">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="password" class="form-control" name="password"
+											placeholder="Inserisci Password" id="passClient">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="password" class="form-control"
+											name="conf-password" placeholder="Conferma Password">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-8">
+										<button type="submit" class="btn btn-default">Registrati</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div id="iscriviProfessionista"
+							class="tab-pane fade in text-center">
+							<h3>Iscriviti come Professionista</h3>
+							<form id="form-iscriviProfessionista" class="form-horizontal"
+								action="IscriviProfessionistaServlet" method="post">
+								<div class="form-group">
+									<div class="col-sm-6">
+										<input type="text" class="form-control" name="nome"
+											placeholder="Inserisci Nome">
+									</div>
+									<div class="col-sm-6">
+										<input type="text" class="form-control" name="cognome"
+											placeholder="Inserisci Cognome">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<select class="form-control" id="professionePro"
+											name="professione">
+											<optgroup label="Amministrazione e Finanza">
+												<option>Addetto alla Contabilità Generale</option>
+												<option>Analista Finanziario d'Impresa</option>
+												<option>Credit Manager</option>
+												<option>Dottore Commercialista</option>
+												<option>Giurista d'Impresa</option>
+												<option>Responsabile Contabilità Generale ed
+													industriale</option>
+												<option>Responsabile del bilancio</option>
+												<option>Revisore del Bilancio</option>
+												<option>Tributarista</option>
+											</optgroup>
+											<optgroup label="Commerciale e Marketing">
+												<option>Agente di Commercio</option>
+												<option>Call Center Manager</option>
+												<option>Direttore Commerciale</option>
+												<option>Direttore Marketing Strategico</option>
+												<option>Esperto Mercati Esteri</option>
+											</optgroup>
+											<optgroup label="Informatica e Tecnologia">
+												<option>Amministratore di rete</option>
+												<option>Analista Programmatore</option>
+												<option>Analista di Sistema</option>
+												<option>Database Administrator</option>
+												<option>Programmatore Informatico</option>
+												<option>SEO Copywriter</option>
+												<option>Tecnico Informatico</option>
+												<option>Web Developer</option>
+											</optgroup>
+											<optgroup label="Risorse Umane">
+												<option>Amministratore del Personale</option>
+												<option>Cake Designer</option>
+												<option>Diet Coach</option>
+												<option>Consulente del Lavoro</option>
+												<option>Estetista Professionista</option>
+												<option>Gestore di Catering</option>
+												<option>Organizzatore di eventi</option>
+												<option>Wedding Planner</option>
+											</optgroup>
+											<optgroup label="Altro">
+												<option>Altro</option>
+											</optgroup>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="email" class="form-control" name="mail"
+											placeholder="Inserisci Email" id="mailPro">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-6">
+										<input type="password" class="form-control" name="password"
+											placeholder="Inserisci Password" id="passPro">
+									</div>
+									<div class="col-sm-6">
+										<input type="password" class="form-control"
+											name="conf-password" placeholder="Conferma Password">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-6">
+										<input type="text" class="form-control" name="telefono"
+											placeholder="Inserisci Telefono" id="telefonoPro">
+									</div>
+									<div class="col-sm-6">
+										<input type="text" class="form-control" name="sito"
+											placeholder="Inserisci Sito" id="sitoPro">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="col-sm-12">
+										<input type="text" class="form-control" name="indirizzo"
+											placeholder="Inserisci indirizzo ES: Via Roma 43, 88046" id="indirizzoPro">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-8">
+										<button type="submit" class="btn btn-default">Registrati</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- /Form Registrazione -->
+					</div>
+					<!-- Elementi del tab -->
+				</div>
+				<!-- /Body del Panel -->
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.validate.min.js"></script>
+	<script src="js/validaLogin.js"></script>
+</body>
+</html>
